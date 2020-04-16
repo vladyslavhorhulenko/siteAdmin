@@ -1,0 +1,35 @@
+html
+  head
+    title Офіційний веб-сайнт кафедри №22 ВІТІ ім. Героїв Крут
+    meta(name='description', content='A cool thing made with HyperDev')
+    link#favicon(rel='icon', href='https://hyperdev.com/favicon-app.ico', type='image/x-icon')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/public/style.css')
+  body
+    p Registration Form
+    form(action='/signup', method='post')
+      div
+        label Логін:
+        input(type='text', name='username')
+      div
+        label Пароль:
+        input(type='password', name='password')
+      div
+        label Ім'я:
+        input(type='text', name='firstName')
+      div
+        label Прізвище:
+        input(type='text', name='lastName')
+      div
+        label Електронна адреса:
+        input(type='text', name='email')
+      if flash
+      p.error=flash
+      div
+        input(type='submit', value='Register')
+      a(href='/') На головну
+          
+script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
+script(src='/public/client.js')

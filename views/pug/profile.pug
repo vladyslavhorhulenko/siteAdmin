@@ -1,4 +1,4 @@
-html
+﻿html
   head
     title Профіль користувача
     meta(name='description', content='Profile')
@@ -10,7 +10,14 @@ html
   body
     h1.border.center Профіль користувача
     h2.center#welcome Ласкаво просимо, #{username}!
-    a(href='/logout') Logout
+    h2 Особиста інформація
+      p Ім'я: #{firstName}
+      p Прізвище: #{lastName}
+  
+    p
+      a(href='/logout') Вийти
+    p
+      a(href='/') На головну
     //add your code below, make sure its indented at this level
     
         
