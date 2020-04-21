@@ -9,19 +9,16 @@ html
     link(rel='stylesheet', href='/public/style.css')
   body
     h1.border.center Офіційний веб-сайт кафедри №22 ВІТІ ім. Героїв Крут
-    p Login Form
-    form(action='/login', method='post')
+    p Створення нової статті
+    form.allForms(action='/addtopic', method='post')
       div
-        label Username:
-        input(type='text', name='username')
+        label Заголовок:
+        input(type='text', name='title')
       div
-        label Password:
-        input(type='password', name='password')
-      if flash
-        p.error=flash
+        label Текст:
+        textarea.textNew(name='text')
       div
-        input(type='submit', value='Log In')
-      a(href='/') На головну
-          
+        input(type='submit', value='Створити')
+           
 script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
 script(src='/public/client.js')

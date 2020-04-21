@@ -23,7 +23,16 @@ html
       
     h2.center#pug-success-message
     | Контент сайту
-    
+    p Останні новини:
+    if isAdmin
+      a(href='/addtopic') Додати
+    hr
+    if topics
+      each topic in topics
+        p
+          | #{topic.date.getUTCDate()}.#{topic.date.getUTCMonth()+1}.#{topic.date.getUTCFullYear()}
+          a(href='/topic/' + topic._id) #{topic.title}
+      
     
       
     script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')

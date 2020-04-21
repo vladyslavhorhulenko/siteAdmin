@@ -5,5 +5,6 @@ module.exports = mongoose.model('User', new mongoose.Schema({
   password: String,
   firstName: String,
   lastName: String,
-  email: String
+  email: String,
+  isAdmin: Boolean
 }));
