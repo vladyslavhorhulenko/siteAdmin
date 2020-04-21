@@ -13,3 +13,13 @@
 .error {
   color: red;
 }
+
+.allForms div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.allForms div .textNew {
+  height: 500px;
+}
